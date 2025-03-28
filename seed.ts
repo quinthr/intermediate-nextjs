@@ -4,7 +4,6 @@ import { events, attendees, rsvps } from '@/db/schema'
 const seedDatabase = async () => {
   try {
     const newUser = await db.query.users.findFirst()
-
     if (!newUser) {
       console.error('create an account first')
       return
